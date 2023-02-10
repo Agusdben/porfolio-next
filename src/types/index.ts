@@ -14,6 +14,10 @@ export enum Skills {
   API_REST = 'Api REST'
 }
 
+export interface Navbar {
+  [key: string]: string
+}
+
 export interface SvgProps {
   fill?: string
   stroke?: string

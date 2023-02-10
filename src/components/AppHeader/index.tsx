@@ -5,30 +5,21 @@ import {
   faChevronRight,
   faChevronLeft
 } from '@fortawesome/free-solid-svg-icons'
+import Logo from '../Logo'
+import LanguageSelector from '../LanguageSelector'
 
 const AppHeader = () => {
   return (
     <>
       <header>
-        <h1>
-          <FontAwesomeIcon icon={faChevronLeft} />
-          <span>AD</span>
-          <FontAwesomeIcon icon={faChevronRight} />
-        </h1>
+        <Logo />
+        <LanguageSelector />
       </header>
       <style jsx>{`
         header {
-          padding: 12px;
-        }
-        h1 {
-          height: 100%;
           display: flex;
-          align-items: center;
-          color: ${colors.primary};
-          margin: 0;
-        }
-        span {
-          color: ${colors.white};
+          padding: 1rem;
+          justify-content: space-between;
         }
       `}</style>
     </>

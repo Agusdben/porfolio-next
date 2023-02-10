@@ -11,7 +11,7 @@ export default css.global`
   body {
     margin: 0;
     padding: 0;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 400;
     font-family: ${fonts.base};
     color: ${colors.white};

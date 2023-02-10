@@ -3,7 +3,7 @@ import { SKILLS_ES } from './skills'
 
 const PROJECTS: Project[] = [
   {
-    title: 'Lista ToDo',
+    title: 'ToDo List',
     description:
       'Aplicación web realizada con Reactjs, donde creo una api con Nodejs, express y mongoDB para poder registrar usuarios y hacer un CRUD de tareas.',
     images: [],
@@ -42,7 +42,7 @@ const PROJECTS: Project[] = [
     ]
   },
   {
-    title: 'Ahorcado',
+    title: 'Hangman',
     description:
       'El juego del ahorcado ¡Podrás elegir si jugar con pistas, o dejar morir al pobre hombre!',
     images: [],
@@ -70,7 +70,7 @@ const PROJECTS: Project[] = [
     ]
   },
   {
-    title: 'Generador QR',
+    title: 'QR Generator',
     description: 'Sitio que te permite generar imagen QR a partir de un texto.',
     images: [],
     skills: [SKILLS_ES.JAVA_SCRIPT, SKILLS_ES.CSS3, SKILLS_ES.HTML5],
@@ -83,7 +83,7 @@ const PROJECTS: Project[] = [
     ]
   },
   {
-    title: 'Piedra papel ó tijeras',
+    title: 'Rock papper scissors',
     description: '',
     images: [],
     skills: [SKILLS_ES.JAVA_SCRIPT, SKILLS_ES.CSS3, SKILLS_ES.HTML5],
@@ -96,7 +96,7 @@ const PROJECTS: Project[] = [
     ]
   },
   {
-    title: 'Simon Dice',
+    title: 'Simon Says',
     description: 'Desarrollado con javascript vanilla.',
     images: [],
     skills: [SKILLS_ES.JAVA_SCRIPT, SKILLS_ES.CSS3, SKILLS_ES.HTML5],

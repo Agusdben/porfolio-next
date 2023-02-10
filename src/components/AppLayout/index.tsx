@@ -1,13 +1,15 @@
 import Head from 'next/head'
 import React from 'react'
 import globals from '@/styles/globals'
-import AppHeader from '@/AppHeader'
+import AppHeader from '../AppHeader'
+import { Navbar } from '@/types'
 
 interface Props {
   children: React.ReactNode
+  navbar: Navbar
 }
 
-const AppLayout = ({ children }: Props) => {
+const AppLayout = ({ children, navbar }: Props) => {
   return (
     <>
       <Head>

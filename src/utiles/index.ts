@@ -1,3 +1,5 @@
+import { TechSkill } from '@/types'
+
 export const importNavbar = ({ locale }: { locale: string }) => {
   return import(`../locales/${locale}/navbar.ts`).then(res => res.default)
 }
@@ -14,7 +16,11 @@ export const importSoftSkills = ({ locale }: { locale: string }) => {
   return import(`../locales/${locale}/softSkills.ts`).then(res => res.default)
 }
 
-export const importSkills = ({ locale }: { locale: string }) => {
+export const importSkills = ({
+  locale
+}: {
+  locale: string
+}): Promise<{ [key: string]: TechSkill }> => {
   return import(`../locales/${locale}/skills.ts`).then(res => res.default)
 }
 

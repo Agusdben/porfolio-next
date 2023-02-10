@@ -1,5 +1,5 @@
 import { Project } from '@/types'
-import { SKILLS_ES } from './skills'
+import SKILLS from './skills'
 
 const PROJECTS: Project[] = [
   {
@@ -8,12 +8,12 @@ const PROJECTS: Project[] = [
       'Aplicación web realizada con Reactjs, donde creo una api con Nodejs, express y mongoDB para poder registrar usuarios y hacer un CRUD de tareas.',
     images: [],
     skills: [
-      SKILLS_ES.MONGODB,
-      SKILLS_ES.EXPRESS,
-      SKILLS_ES.REACTJS,
-      SKILLS_ES.NODE,
-      SKILLS_ES.CSS3,
-      SKILLS_ES.API_REST
+      SKILLS.MONGODB,
+      SKILLS.EXPRESS,
+      SKILLS.REACTJS,
+      SKILLS.NODE,
+      SKILLS.CSS3,
+      SKILLS.API_REST
     ],
     url: 'https://mytodosmylife.netlify.app/',
     repositories: [
@@ -32,7 +32,7 @@ const PROJECTS: Project[] = [
     description:
       'Aplicación web que utiliza la api pública GIPHY, donde puedes buscar gifs, agregarlos a favoritos, ver tu última búsqueda y más.',
     images: [],
-    skills: [SKILLS_ES.REACTJS, SKILLS_ES.CSS3, SKILLS_ES.API_REST],
+    skills: [SKILLS.REACTJS, SKILLS.CSS3, SKILLS.API_REST],
     url: 'https://fakegiphy.netlify.app/',
     repositories: [
       {
@@ -46,7 +46,7 @@ const PROJECTS: Project[] = [
     description:
       'El juego del ahorcado ¡Podrás elegir si jugar con pistas, o dejar morir al pobre hombre!',
     images: [],
-    skills: [SKILLS_ES.REACTJS, SKILLS_ES.TAILWINDCSS],
+    skills: [SKILLS.REACTJS, SKILLS.TAILWINDCSS],
     url: 'https://easyhangman.netlify.app/',
     repositories: [
       {
@@ -60,7 +60,7 @@ const PROJECTS: Project[] = [
     description:
       'Juego que cuenta con 12 niveles, donde tienes que escapar de distintos laberintos.',
     images: [],
-    skills: [SKILLS_ES.REACTJS, SKILLS_ES.TAILWINDCSS, SKILLS_ES.TYPE_SCRIPT],
+    skills: [SKILLS.REACTJS, SKILLS.TAILWINDCSS, SKILLS.TYPE_SCRIPT],
     url: 'https://easymaze.netlify.app/',
     repositories: [
       {
@@ -73,7 +73,7 @@ const PROJECTS: Project[] = [
     title: 'QR Generator',
     description: 'Sitio que te permite generar imagen QR a partir de un texto.',
     images: [],
-    skills: [SKILLS_ES.JAVA_SCRIPT, SKILLS_ES.CSS3, SKILLS_ES.HTML5],
+    skills: [SKILLS.JAVA_SCRIPT, SKILLS.CSS3, SKILLS.HTML5],
     url: 'https://qrpngmaker.netlify.app/',
     repositories: [
       {
@@ -86,7 +86,7 @@ const PROJECTS: Project[] = [
     title: 'Rock papper scissors',
     description: '',
     images: [],
-    skills: [SKILLS_ES.JAVA_SCRIPT, SKILLS_ES.CSS3, SKILLS_ES.HTML5],
+    skills: [SKILLS.JAVA_SCRIPT, SKILLS.CSS3, SKILLS.HTML5],
     url: 'https://rockpaperscissorsplay.netlify.app/',
     repositories: [
       {
@@ -99,7 +99,7 @@ const PROJECTS: Project[] = [
     title: 'Simon Says',
     description: 'Desarrollado con javascript vanilla.',
     images: [],
-    skills: [SKILLS_ES.JAVA_SCRIPT, SKILLS_ES.CSS3, SKILLS_ES.HTML5],
+    skills: [SKILLS.JAVA_SCRIPT, SKILLS.CSS3, SKILLS.HTML5],
     url: 'https://simonalwayssays.netlify.app/',
     repositories: [
       {
@@ -112,7 +112,7 @@ const PROJECTS: Project[] = [
     title: 'Tasky',
     description: 'Proyecto pequeño para aprender TypeScript con React.',
     images: [],
-    skills: [SKILLS_ES.TYPE_SCRIPT, SKILLS_ES.REACTJS, SKILLS_ES.TAILWINDCSS],
+    skills: [SKILLS.TYPE_SCRIPT, SKILLS.REACTJS, SKILLS.TAILWINDCSS],
     url: 'https://taskyts.netlify.app/',
     repositories: [
       {

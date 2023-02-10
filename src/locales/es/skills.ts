@@ -1,6 +1,6 @@
 import { Skills, TechSkill } from '@/types'
 
-export const SKILLS_ES: { [key: string]: TechSkill } = {
+const SKILLS: { [key: string]: TechSkill } = {
   HTML5: {
     type: Skills.HTML5,
     level: 'Alto',
@@ -67,3 +67,5 @@ export const SKILLS_ES: { [key: string]: TechSkill } = {
     logo: ''
   }
 }
+
+export default SKILLS

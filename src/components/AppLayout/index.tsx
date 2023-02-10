@@ -6,10 +6,9 @@ import { Navbar } from '@/types'
 
 interface Props {
   children: React.ReactNode
-  navbar: Navbar
 }
 
-const AppLayout = ({ children, navbar }: Props) => {
+const AppLayout = ({ children }: Props) => {
   return (
     <>
       <Head>

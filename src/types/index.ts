@@ -31,7 +31,7 @@ export interface Url {
 }
 
 export interface Skill {
-  type: Skills
+  type: string
   logo: string
 }
 
@@ -49,5 +49,19 @@ export interface Project {
 }
 
 export interface Contact extends Url {
-  icon: string
+  logo: string
+}
+
+export interface Footer {
+  createdBy: string
+}
+
+export interface Content {
+  navbar: Navbar
+  presentation: string
+  resume: string
+  softSkills: Skill[]
+  skills: TechSkill[]
+  projects: Project[]
+  footer: Footer
 }

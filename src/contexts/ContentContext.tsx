@@ -31,20 +31,24 @@ interface Props {
 const ContentContextProvider = ({ children }: Props) => {
   const { locale = 'es' } = useRouter()
   const [content, dispatch] = useReducer(contentReducer, CONTENT_INITIAL_STATE)
-  console.log(content)
+
   useEffect(() => {
     ;(async () => {
       const navbar: Content['navbar'] = await importNavbar({ locale })
+
       const presentation: Content['presentation'] = await importPresentation({
         locale
       })
       const resume: string = await importResume({ locale })
+
       const softSkills: Content['softSkills'] = await importSoftSkills({
         locale
       })
+
       const skills: Content['skills'] = Object.values(
         await importSkills({ locale })
       )
+
       const projects: Content['projects'] = await importProjects({ locale })
 
       const footer: Content['footer'] = await importFooter({ locale })

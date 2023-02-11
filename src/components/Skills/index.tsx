@@ -7,7 +7,7 @@ const Skills = () => {
   const { skills, navbar } = useContent()
   return (
     <>
-      <section>
+      <section id={navbar.skills}>
         <h2>{navbar.skills}</h2>
         <ul>
           {skills.map((s, i) => (

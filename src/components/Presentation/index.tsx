@@ -1,13 +1,15 @@
 import useContent from '@/hooks/useContent'
+import { animations } from '@/styles/animations'
 import { breakPoints, colors } from '@/styles/theme'
 import Image from 'next/image'
 import React from 'react'
+import ArticleTitle from '../ArticleTitle'
 
 const Presentation = () => {
   const { navbar, presentation } = useContent()
   return (
     <>
-      <section>
+      <section id={navbar.presentation}>
         <article className='image'>
           <Image
             fill
@@ -16,14 +18,15 @@ const Presentation = () => {
           />
         </article>
         <article className='content'>
-          <h2>Agustin Di Benedetto</h2>
+          <ArticleTitle>Agustin Di Benedetto</ArticleTitle>
           <p>{presentation}</p>
         </article>
       </section>
       <style jsx>{`
         section {
           display: flex;
-          gap: 24px;
+          text-align: center;
+          gap: 0 32px;
           flex-direction: column;
           align-items: center;
           justify-content: center;
@@ -32,40 +35,26 @@ const Presentation = () => {
 
         .image {
           width: 300px;
-          aspect-ratio: 1/1;
+          aspect-ratio: 1/1.2;
           position: relative;
           background-image: radial-gradient(
             circle at top left,
             ${colors.tertiary},
             ${colors.secondary}
           );
-          clip-path: polygon(
-            50% 0%,
-            80% 10%,
-            100% 35%,
-            100% 70%,
-            80% 90%,
-            50% 100%,
-            20% 90%,
-            0% 70%,
-            0% 35%,
-            20% 10%
-          );
+          border-radius: 30% 70% 30% 70% / 80% 20% 80% 20%;
+          overflow: hidden;
+          animation: ${animations.morphingBorder} 30s ease infinite;
         }
 
         .image > :global(img) {
-          object-position: top;
+          object-position: 0px -5px;
           object-fit: cover;
-        }
-
-        .content h2 {
-          margin-top: 0;
-          color: ${colors.primary};
         }
 
         .content p {
           max-width: 400px;
-          line-height: 1.2em;
+          line-height: 1.4em;
           text-align: left;
         }
 
@@ -77,6 +66,11 @@ const Presentation = () => {
         @media (min-width: ${breakPoints.tablet}) {
           section {
             flex-direction: row;
+            text-align: left;
+          }
+          .image {
+            width: 350px;
+            object-position: center;
           }
         }
       `}</style>

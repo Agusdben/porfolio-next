@@ -13,6 +13,17 @@ export default css.global`
     padding: 0;
   }
 
+  a {
+    text-decoration: none;
+    display: block;
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+  }
+
   body {
     margin: 0;
     padding: 0;

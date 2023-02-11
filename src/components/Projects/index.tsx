@@ -5,7 +5,7 @@ import React from 'react'
 const Projects = () => {
   const { projects, navbar } = useContent()
   return (
-    <section>
+    <section id={navbar.projects}>
       <h2>{navbar.projects}</h2>
       <ul>
         {projects.map(p => (

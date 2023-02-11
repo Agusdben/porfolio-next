@@ -4,26 +4,29 @@ import { breakPoints, colors } from '@/styles/theme'
 import Image from 'next/image'
 import React from 'react'
 import ArticleTitle from '../ArticleTitle'
+import ContentSection from '../ContentSection'
 
 const Presentation = () => {
   const { navbar, presentation } = useContent()
   return (
     <>
-      <section id={navbar.presentation}>
-        <article className='image'>
-          <Image
-            fill
-            src='/agustin.png'
-            alt='Photo of the creator of portfolio'
-          />
-        </article>
-        <article className='content'>
-          <ArticleTitle>Agustin Di Benedetto</ArticleTitle>
-          <p>{presentation}</p>
-        </article>
-      </section>
+      <ContentSection id={navbar.presentation}>
+        <div>
+          <article className='image'>
+            <Image
+              fill
+              src='/agustin.png'
+              alt='Photo of the creator of portfolio'
+            />
+          </article>
+          <article className='content'>
+            <ArticleTitle>Agustin Di Benedetto</ArticleTitle>
+            <p>{presentation}</p>
+          </article>
+        </div>
+      </ContentSection>
       <style jsx>{`
-        section {
+        div {
           display: flex;
           text-align: center;
           gap: 0 32px;
@@ -64,9 +67,10 @@ const Presentation = () => {
         }
 
         @media (min-width: ${breakPoints.tablet}) {
-          section {
-            flex-direction: row;
+          div {
+            flex-direction: row-reverse;
             text-align: left;
+            gap: 100px;
           }
           .image {
             width: 350px;

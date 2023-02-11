@@ -1,14 +1,14 @@
 import useContent from '@/hooks/useContent'
 import { animations } from '@/styles/animations'
 import React from 'react'
+import ContentSection from '../ContentSection'
 import SkillCard from '../SkillCard'
 
 const Skills = () => {
   const { skills, navbar } = useContent()
   return (
     <>
-      <section id={navbar.skills}>
-        <h2>{navbar.skills}</h2>
+      <ContentSection id={navbar.skills} title={navbar.skills}>
         <ul>
           {skills.map((s, i) => (
             <li key={s.type} style={{ animationDelay: `${75 * (i / 2)}ms` }}>
@@ -16,7 +16,7 @@ const Skills = () => {
             </li>
           ))}
         </ul>
-      </section>
+      </ContentSection>
       <style jsx>{`
         ul {
           max-width: 768px;

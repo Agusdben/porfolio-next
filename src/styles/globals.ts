@@ -8,6 +8,12 @@ export default css.global`
     box-sizing: border-box;
   }
 
+  html {
+    --scroll-behavior: smooth !important; /** because in nexjs smooth not working without !important */
+    scroll-behavior: smooth !important;
+    scroll-padding-top: 75px;
+  }
+
   ul {
     list-style: none;
     padding: 0;
@@ -20,7 +26,7 @@ export default css.global`
 
   button {
     cursor: pointer;
-    border: none;
+    border: 0;
     background-color: transparent;
   }
 
@@ -52,5 +58,13 @@ export default css.global`
     flex-direction: column;
     gap: 2rem;
     margin: auto;
+  }
+
+  body::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: ${colors.primary};
   }
 `

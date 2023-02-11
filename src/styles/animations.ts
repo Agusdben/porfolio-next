@@ -1,6 +1,10 @@
 import css from 'styled-jsx/css'
 
-export const animations = { toLeft: 'toLeft', morphingBorder: 'morphingBorder' }
+export const animations = {
+  toLeft: 'toLeft',
+  morphingBorder: 'morphingBorder',
+  fallAndBounce: 'fallAndBounce'
+}
 
 export default css.global`
   @keyframes ${animations.toLeft} {
@@ -29,6 +33,21 @@ export default css.global`
     }
     75% {
       border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+    }
+  }
+
+  @keyframes ${animations.fallAndBounce} {
+    0% {
+      transform: translate(0px, -50px);
+    }
+    50% {
+      transform: translate(0px, 0px);
+    }
+    75% {
+      transform: translate(0px, -15px);
+    }
+    100% {
+      transform: translate(0px, 0px);
     }
   }
 `

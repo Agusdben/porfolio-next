@@ -1,12 +1,12 @@
 import useContent from '@/hooks/useContent'
 import { Project } from '@/types'
 import React from 'react'
+import ContentSection from '../ContentSection'
 
 const Projects = () => {
   const { projects, navbar } = useContent()
   return (
-    <section id={navbar.projects}>
-      <h2>{navbar.projects}</h2>
+    <ContentSection id={navbar.projects} title={navbar.projects}>
       <ul>
         {projects.map(p => (
           <li key={p.title}>
@@ -14,7 +14,7 @@ const Projects = () => {
           </li>
         ))}
       </ul>
-    </section>
+    </ContentSection>
   )
 }
 

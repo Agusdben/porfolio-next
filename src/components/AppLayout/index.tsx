@@ -2,7 +2,6 @@ import Head from 'next/head'
 import React from 'react'
 import globals from '@/styles/globals'
 import AppHeader from '../AppHeader'
-import { Navbar } from '@/types'
 import animations from '@/styles/animations'
 
 interface Props {

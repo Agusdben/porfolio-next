@@ -1,11 +1,12 @@
 import { useRouter } from 'next/router'
 
 const LanguageSelector = () => {
-  const { asPath, locales, locale, ...router } = useRouter()
+  const { asPath, basePath, locales, locale, ...router } = useRouter()
   const onLocaleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const locale = e.target.value
-    router.push(asPath, asPath, {
-      locale
+    router.push(basePath, asPath, {
+      locale,
+      scroll: true
     })
   }
   return (

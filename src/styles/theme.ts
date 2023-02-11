@@ -4,7 +4,7 @@ export const fonts = {
 
 export const breakPoints = {
   tablet: '768px',
-  desktop: '1280px'
+  desktop: '1920px'
 }
 
 export const colors = {

@@ -19,7 +19,7 @@ interface ContentContext {
   dispatch: React.Dispatch<ContentActions>
 }
 
-const ContentContext = createContext<ContentContext>({
+export const ContentContext = createContext<ContentContext>({
   content: CONTENT_INITIAL_STATE,
   dispatch: () => {}
 })

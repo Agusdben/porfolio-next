@@ -3,6 +3,7 @@ import React from 'react'
 import globals from '@/styles/globals'
 import AppHeader from '../AppHeader'
 import { Navbar } from '@/types'
+import animations from '@/styles/animations'
 
 interface Props {
   children: React.ReactNode
@@ -24,6 +25,9 @@ const AppLayout = ({ children }: Props) => {
       </div>
       <style jsx global>
         {globals}
+      </style>
+      <style jsx global>
+        {animations}
       </style>
     </>
   )

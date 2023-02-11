@@ -1,32 +1,14 @@
 import AppLayout from '@/components/AppLayout'
+import Presentation from '@/components/Presentation'
 import Projects from '@/components/Projects'
-import { Project } from '@/types'
-import { GetStaticProps } from 'next'
+import Skills from '@/components/Skills'
 
-interface Props {
-  navbar: { [key: string]: string }
-  projects: Project[]
-}
-
-export default function Home ({ navbar, projects }: Props) {
+export default function Home () {
   return (
     <AppLayout>
-      <Projects projects={projects} title={navbar.projects} />
+      <Presentation />
+      <Skills />
+      <Projects />
     </AppLayout>
   )
-}
-
-export const getStaticProps: GetStaticProps = async context => {
-  const { locale } = context
-  const localeToUse = locale || 'es'
-
-  const projects = await import(`../locales/${localeToUse}/projects.ts`)
-  const navbar = await import(`../locales/${localeToUse}/navbar.ts`)
-
-  return {
-    props: {
-      projects: projects.default,
-      navbar: navbar.default
-    }
-  }
 }

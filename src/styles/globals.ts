@@ -8,6 +8,11 @@ export default css.global`
     box-sizing: border-box;
   }
 
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
   body {
     margin: 0;
     padding: 0;
@@ -23,10 +28,18 @@ export default css.global`
     width: 100vw;
     min-height: 100vh;
     display: flex;
+    gap: 1rem;
     flex-direction: column;
   }
 
   main {
     flex: 1;
+    padding: 0 12px;
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: auto;
   }
 `

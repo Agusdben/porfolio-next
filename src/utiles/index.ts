@@ -31,3 +31,8 @@ export const importProjects = ({ locale }: { locale: string }) => {
 export const importFooter = ({ locale }: { locale: string }) => {
   return import(`../locales/${locale}/footer.ts`).then(res => res.default)
 }
+
+export const addOpacityToColor = (color: string, opacity: number) => {
+  const opacityHex = Math.round(opacity * 255).toString(16)
+  return `${color}${opacityHex}`
+}

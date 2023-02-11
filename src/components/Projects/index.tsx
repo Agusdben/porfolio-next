@@ -1,20 +1,19 @@
+import useContent from '@/hooks/useContent'
 import { Project } from '@/types'
 import React from 'react'
 
-interface Props {
-  projects: Project[]
-  title: string
-}
-
-const Projects = ({ projects, title }: Props) => {
+const Projects = () => {
+  const { projects, navbar } = useContent()
   return (
     <section>
-      <h2>{title}</h2>
-      {projects.map(p => (
-        <div key={p.title}>
-          <p>{p.title}</p>
-        </div>
-      ))}
+      <h2>{navbar.projects}</h2>
+      <ul>
+        {projects.map(p => (
+          <li key={p.title}>
+            <p>{p.title}</p>
+          </li>
+        ))}
+      </ul>
     </section>
   )
 }

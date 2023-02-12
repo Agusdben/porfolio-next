@@ -1,6 +1,6 @@
 import useContent from '@/hooks/useContent'
 import { animations } from '@/styles/animations'
-import { breakPoints, colors } from '@/styles/theme'
+import { breakPoints, colors, headerConfig } from '@/styles/theme'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
@@ -38,6 +38,7 @@ const AppNavbar = ({ toggle, onClose }: Props) => {
       <style jsx>{`
         nav {
           position: absolute;
+          text-transform: capitalize;
           top: 0;
           left: 0;
           height: 100vh;
@@ -54,7 +55,7 @@ const AppNavbar = ({ toggle, onClose }: Props) => {
         }
 
         li {
-          width: 250px;
+          width: ${headerConfig.desktop.width};
           text-align: center;
           margin: auto;
           border-radius: 1rem;
@@ -98,36 +99,17 @@ const AppNavbar = ({ toggle, onClose }: Props) => {
 
         @media (min-width: ${breakPoints.desktop}) {
           nav {
+            position: relative;
             display: flex;
-            z-index: -1;
-            width: fit-content;
-            height: 100vh;
-            top: 0;
             animation: none;
-            background-color: ${colors.secondary};
-            box-shadow: 1px 0 2px ${colors.primary};
+            top: unset;
+            left: unset;
+            width: 100%;
+            background-color: transparent;
           }
 
           li > :global(a) {
             color: ${colors.white};
-          }
-          li {
-            position: relative;
-          }
-
-          li:hover::after {
-            content: '<';
-            color: ${colors.primary};
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            transform: translateY(-50%);
-          }
-
-          .language-selector {
-            position: absolute;
-            bottom: 10px;
-            display: block;
           }
         }
       `}</style>

@@ -1,5 +1,5 @@
 import Logo from '../Logo'
-import { breakPoints, colors } from '@/styles/theme'
+import { breakPoints, colors, headerConfig } from '@/styles/theme'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import React, { useState } from 'react'
@@ -23,13 +23,13 @@ const AppHeader = () => {
           <Logo />
         </button>
         <section>
+          <AppNavbar toggle={menuToggle} onClose={handleMenuToggle} />
           <div className='language-selector'>
             <LanguageSelector />
           </div>
           <button type='button' onClick={handleMenuToggle}>
             <FontAwesomeIcon icon={faBars} />
           </button>
-          <AppNavbar toggle={menuToggle} onClose={handleMenuToggle} />
         </section>
       </header>
       <style jsx>{`
@@ -58,9 +58,23 @@ const AppHeader = () => {
         }
 
         @media (min-width: ${breakPoints.desktop}) {
-          .language-selector,
           section button {
             display: none;
+          }
+
+          header {
+            width: ${headerConfig.desktop.width};
+            height: 100vh;
+            gap: 2rem;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 1px 0px 1px ${colors.primary};
+          }
+
+          section {
+            flex: 1;
+            flex-direction: column;
+            justify-content: space-between;
           }
         }
       `}</style>

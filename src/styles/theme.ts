@@ -7,6 +7,12 @@ export const breakPoints = {
   desktop: '1920px'
 }
 
+export const headerConfig = {
+  desktop: {
+    width: '220px'
+  }
+}
+
 export const colors = {
   white: '#fafafafa',
   black: '#101124',

@@ -2,7 +2,7 @@ import { Navbar } from '@/types'
 
 const NAVBAR: Navbar = {
   presentation: 'presentation',
-  me: 'me',
+  softSkills: 'soft skills',
   skills: 'skills',
   projects: 'projects',
   contact: 'contact me'

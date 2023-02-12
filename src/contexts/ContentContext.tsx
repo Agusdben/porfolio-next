@@ -2,15 +2,6 @@ import { ContentActions } from '@/reducers/content/contentActions'
 import { contentReducer } from '@/reducers/content/contentReducer'
 import { CONTENT_INITIAL_STATE } from '@/reducers/content/initialState'
 import { Content } from '@/types'
-import {
-  importFooter,
-  importNavbar,
-  importPresentation,
-  importProjects,
-  importResume,
-  importSkills,
-  importSoftSkills
-} from '@/utiles'
 import { useRouter } from 'next/router'
 import React, { createContext, useEffect, useReducer } from 'react'
 
@@ -34,36 +25,13 @@ const ContentContextProvider = ({ children }: Props) => {
 
   useEffect(() => {
     ;(async () => {
-      const navbar: Content['navbar'] = await importNavbar({ locale })
-
-      const presentation: Content['presentation'] = await importPresentation({
-        locale
-      })
-      const resume: string = await importResume({ locale })
-
-      const softSkills: Content['softSkills'] = await importSoftSkills({
-        locale
-      })
-
-      const skills: Content['skills'] = Object.values(
-        await importSkills({ locale })
-      )
-
-      const projects: Content['projects'] = await importProjects({ locale })
-
-      const footer: Content['footer'] = await importFooter({ locale })
+      const newContent: Content = await import(
+        `../locales/${locale}/globals.ts`
+      ).then(file => file.default)
 
       dispatch({
         type: 'set_new_content',
-        payload: {
-          navbar,
-          presentation,
-          resume,
-          softSkills,
-          skills,
-          projects,
-          footer
-        }
+        payload: newContent
       })
     })()
   }, [locale])

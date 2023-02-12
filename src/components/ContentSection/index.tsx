@@ -12,21 +12,33 @@ const ContentSection = ({ id, title, children }: Props) => {
     <>
       <section id={id}>
         {title && <h2>{title}</h2>}
-        {children}
+        <div>{children}</div>
       </section>
       <style jsx>{`
-        h2 {
-          text-transform: uppercase;
-          margin: 0 auto;
-          text-decoration: underline;
-          text-decoration-color: ${colors.primary};
-          text-decoration-style: wavy;
-        }
         section {
           min-height: 100vh;
           display: flex;
           flex-direction: column;
           justify-content: center;
+        }
+
+        h2 {
+          text-transform: uppercase;
+          margin: 1rem auto;
+          text-decoration: underline;
+          text-decoration-color: ${colors.primary};
+          text-decoration-style: wavy;
+        }
+
+        div {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        section:nth-child(even) {
+          background-color: ${colors.primary};
         }
       `}</style>
     </>

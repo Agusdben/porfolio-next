@@ -48,10 +48,6 @@ export interface Project {
   skills: TechSkill[]
 }
 
-export interface Contact extends Url {
-  logo: string
-}
-
 export interface Footer {
   createdBy: string
 }

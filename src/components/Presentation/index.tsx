@@ -1,17 +1,19 @@
+import CONTACT from '@/constants/contact'
 import useContent from '@/hooks/useContent'
 import { animations } from '@/styles/animations'
 import { breakPoints, colors } from '@/styles/theme'
 import Image from 'next/image'
 import React from 'react'
 import ArticleTitle from '../ArticleTitle'
+import ButtonLink from '../ButtonLink'
 import ContentSection from '../ContentSection'
 
 const Presentation = () => {
-  const { navbar, presentation } = useContent()
+  const { navbar, presentation, resume } = useContent()
   return (
     <>
       <ContentSection id={navbar.presentation}>
-        <div>
+        <div className='container'>
           <article className='image'>
             <Image
               fill
@@ -22,11 +24,52 @@ const Presentation = () => {
           <article className='content'>
             <ArticleTitle>Agustin Di Benedetto</ArticleTitle>
             <p>{presentation}</p>
+            <div className='links'>
+              <ButtonLink
+                href={CONTACT.github}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <span>GitHub</span>
+                <Image
+                  width={16}
+                  height={16}
+                  src='/logos/github.png'
+                  alt='Github logo'
+                />
+              </ButtonLink>
+              <ButtonLink
+                href={CONTACT.linkedin}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <span>Linkedin</span>
+                <Image
+                  width={20}
+                  height={20}
+                  src='/logos/linkedin.png'
+                  alt='linkedin logo'
+                />
+              </ButtonLink>
+              <ButtonLink
+                href={`/files/${resume}`}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <span>cv</span>
+                <Image
+                  width={20}
+                  height={20}
+                  src='/file-pdf.svg'
+                  alt='linkedin logo'
+                />
+              </ButtonLink>
+            </div>
           </article>
         </div>
       </ContentSection>
       <style jsx>{`
-        div {
+        .container {
           display: flex;
           text-align: center;
           gap: 0 32px;
@@ -67,8 +110,14 @@ const Presentation = () => {
           font-size: 1.3em;
         }
 
+        .links {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+
         @media (min-width: ${breakPoints.tablet}) {
-          div {
+          .container {
             flex-direction: row-reverse;
             text-align: left;
             gap: 100px;

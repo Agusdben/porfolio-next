@@ -20,7 +20,6 @@ const Skills = () => {
       <style jsx>{`
         ul {
           max-width: 768px;
-          margin: auto;
           display: flex;
           flex-wrap: wrap;
           justify-content: center;

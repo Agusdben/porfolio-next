@@ -1,6 +1,6 @@
 import { Contact } from '@/types'
 
-const CONTACT: Contact[] = [
+const CONTACT2: Contact[] = [
   { type: '+54 (341) 5027 737', url: 'tel:+5493415027737', logo: '' },
   {
     type: 'agustindibenedetto98@gmail.com',
@@ -13,5 +13,12 @@ const CONTACT: Contact[] = [
     logo: ''
   }
 ]
+
+const CONTACT = {
+  phone: '+54 (341) 5027 737',
+  email: 'agustindibenedetto98@gmail.com',
+  linkedin: 'https://www.linkedin.com/in/agusdben/',
+  github: 'https://github.com/Agusdben'
+}
 
 export default CONTACT

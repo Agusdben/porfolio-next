@@ -2,10 +2,10 @@ import { Navbar } from '@/types'
 
 const NAVBAR: Navbar = {
   presentation: 'presentación',
-  softSkills: 'habilidades blandas',
+  aboutme: 'sobre mí',
   skills: 'habilidades',
   projects: 'proyectos',
-  contact: 'contactame!'
+  contact: 'contáctame!'
 }
 
 export default NAVBAR

@@ -3,6 +3,7 @@ import React from 'react'
 import globals from '@/styles/globals'
 import AppHeader from '../AppHeader'
 import animations from '@/styles/animations'
+import AppBackground from '../AppBackground'
 
 interface Props {
   children: React.ReactNode
@@ -21,6 +22,7 @@ const AppLayout = ({ children }: Props) => {
         <AppHeader />
         <main>{children}</main>
         <footer>footer</footer>
+        <AppBackground />
       </div>
       <style jsx global>
         {globals}

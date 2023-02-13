@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link from 'next/link'
 import React from 'react'
 import LanguageSelector from '../LanguageSelector'
-import Logo from '../Logo'
 
 interface Props {
   toggle: boolean

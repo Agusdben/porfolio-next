@@ -1,13 +1,26 @@
 import useContent from '@/hooks/useContent'
+import { animations } from '@/styles/animations'
 import React from 'react'
-import ContentSection from '../ContentSection'
 
 const SoftSkills = () => {
-  const { softSkills, navbar } = useContent()
+  const { softSkills } = useContent()
   return (
-    <ContentSection title={navbar.softSkills} id={navbar.softSkills}>
-      SoftSkills
-    </ContentSection>
+    <>
+      <ul>
+        {softSkills.map((s, i) => (
+          <li style={{ animationDuration: `${200 * i}ms` }} key={s.type}>
+            {s.type}
+          </li>
+        ))}
+      </ul>
+      <style jsx>{`
+        li {
+          text-align: center;
+          animation-name: ${animations.toRight};
+          animation-timing-function: linear;
+        }
+      `}</style>
+    </>
   )
 }
 

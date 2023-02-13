@@ -1,5 +1,6 @@
 import { colors } from '@/styles/theme'
 import React from 'react'
+import { useInView } from 'react-intersection-observer'
 
 interface Props {
   id: string
@@ -8,14 +9,19 @@ interface Props {
 }
 
 const ContentSection = ({ id, title, children }: Props) => {
+  const { ref, inView } = useInView({
+    threshold: 0,
+    triggerOnce: true
+  })
   return (
     <>
-      <section id={id}>
+      <section ref={ref} id={id}>
         {title && <h2>{title}</h2>}
-        <div>{children}</div>
+        {inView && <div>{children}</div>}
       </section>
       <style jsx>{`
         section {
+          position: relative;
           min-height: 100vh;
           display: flex;
           flex-direction: column;
@@ -35,10 +41,6 @@ const ContentSection = ({ id, title, children }: Props) => {
           display: flex;
           align-items: center;
           justify-content: center;
-        }
-
-        section:nth-child(even) {
-          background-color: ${colors.primary};
         }
       `}</style>
     </>

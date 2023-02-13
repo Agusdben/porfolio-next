@@ -47,6 +47,7 @@ const Presentation = () => {
           );
           border-radius: 30% 70% 30% 70% / 80% 20% 80% 20%;
           overflow: hidden;
+          filter: drop-shadow(0 0 1px ${colors.primary});
           animation: ${animations.morphingBorder} 30s ease infinite;
         }
 

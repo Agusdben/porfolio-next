@@ -2,6 +2,7 @@ import css from 'styled-jsx/css'
 
 export const animations = {
   toLeft: 'toLeft',
+  toRight: 'toRight',
   morphingBorder: 'morphingBorder',
   fallAndBounce: 'fallAndBounce'
 }
@@ -14,6 +15,15 @@ export default css.global`
     }
     100% {
       opacity: 1;
+      transform: translate(0px);
+    }
+  }
+
+  @keyframes ${animations.toRight} {
+    0% {
+      transform: translate(-100%);
+    }
+    100% {
       transform: translate(0px);
     }
   }

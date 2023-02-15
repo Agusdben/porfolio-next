@@ -30,12 +30,14 @@ export interface Url {
   url: string
 }
 
-export interface Skill {
+export interface SoftSkill {
   type: string
-  logo: string
+  image: string
 }
 
-export interface TechSkill extends Skill {
+export interface TechSkill {
+  type: string
+  logo: string
   level: string
 }
 
@@ -56,7 +58,7 @@ export interface Content {
   navbar: Navbar
   presentation: string
   resume: string
-  softSkills: Skill[]
+  softSkills: SoftSkill[]
   skills: TechSkill[]
   projects: Project[]
   footer: Footer

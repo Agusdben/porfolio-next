@@ -7,7 +7,9 @@ import React from 'react'
 import ArticleTitle from '../ArticleTitle'
 import ButtonLink from '../ButtonLink'
 import ContentSection from '../ContentSection'
-
+import { DiGithubAlt } from 'react-icons/di'
+import { AiFillLinkedin } from 'react-icons/ai'
+import { VscFilePdf } from 'react-icons/vsc'
 const Presentation = () => {
   const { navbar, presentation, resume } = useContent()
   return (
@@ -31,25 +33,15 @@ const Presentation = () => {
                 rel='noopener noreferrer'
               >
                 <span>GitHub</span>
-                <Image
-                  width={16}
-                  height={16}
-                  src='/logos/github.png'
-                  alt='Github logo'
-                />
+                <DiGithubAlt />
               </ButtonLink>
               <ButtonLink
                 href={CONTACT.linkedin}
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                <span>Linkedin</span>
-                <Image
-                  width={20}
-                  height={20}
-                  src='/logos/linkedin.png'
-                  alt='linkedin logo'
-                />
+                <span>LinkedIn</span>
+                <AiFillLinkedin />
               </ButtonLink>
               <ButtonLink
                 href={`/files/${resume}`}
@@ -57,12 +49,7 @@ const Presentation = () => {
                 rel='noopener noreferrer'
               >
                 <span>cv</span>
-                <Image
-                  width={20}
-                  height={20}
-                  src='/file-pdf.svg'
-                  alt='linkedin logo'
-                />
+                <VscFilePdf />
               </ButtonLink>
             </div>
           </article>

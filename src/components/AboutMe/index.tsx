@@ -14,7 +14,10 @@ const AboutMe = () => {
       </ContentSection>
       <style jsx>{`
         article {
-          font-size: 1.5rem;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
         }
       `}</style>
     </>

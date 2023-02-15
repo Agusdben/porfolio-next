@@ -1,25 +1,30 @@
-import { Skill } from '@/types'
+import { SoftSkill } from '@/types'
 
-const SOFT_SKILLS: Skill[] = [
+const SOFT_SKILLS: SoftSkill[] = [
   {
     type: 'Autodidact',
-    logo: ''
+    logo: 'user-pen.svg',
+    image: ''
   },
   {
     type: 'Good teamwork',
-    logo: ''
+    logo: '',
+    image: ''
   },
   {
     type: 'Critical thinking',
-    logo: ''
+    logo: '',
+    image: ''
   },
   {
     type: 'Problem solving',
-    logo: ''
+    logo: '',
+    image: ''
   },
   {
-    type: 'Time managment',
-    logo: ''
+    type: 'Time management',
+    logo: '',
+    image: ''
   }
 ]
 

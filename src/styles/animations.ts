@@ -4,17 +4,25 @@ export const animations = {
   toLeft: 'toLeft',
   toRight: 'toRight',
   morphingBorder: 'morphingBorder',
-  fallAndBounce: 'fallAndBounce'
+  fallAndBounce: 'fallAndBounce',
+  appear: 'appear'
 }
 
 export default css.global`
-  @keyframes ${animations.toLeft} {
+  @keyframes ${animations.appear} {
     0% {
-      opacity: 0.75;
-      transform: translate(50px);
+      opacity: 0;
     }
     100% {
       opacity: 1;
+    }
+  }
+
+  @keyframes ${animations.toLeft} {
+    0% {
+      transform: translate(100%);
+    }
+    100% {
       transform: translate(0px);
     }
   }

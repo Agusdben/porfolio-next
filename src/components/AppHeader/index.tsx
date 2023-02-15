@@ -1,10 +1,9 @@
 import Logo from '../Logo'
 import { breakPoints, colors, headerConfig } from '@/styles/theme'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
 import React, { useState } from 'react'
 import AppNavbar from '../AppNavbar'
 import LanguageSelector from '../LanguageSelector'
+import { FaBars } from 'react-icons/fa'
 
 const AppHeader = () => {
   const [menuToggle, setMenuToggle] = useState<boolean>(false)
@@ -28,7 +27,7 @@ const AppHeader = () => {
             <LanguageSelector />
           </div>
           <button type='button' onClick={handleMenuToggle}>
-            <FontAwesomeIcon icon={faBars} />
+            <FaBars className='fa-bars' />
           </button>
         </section>
       </header>
@@ -46,7 +45,7 @@ const AppHeader = () => {
         }
 
         button > :global(svg) {
-          width: 30px;
+          font-size: 1.3rem;
           aspect-ratio: 1/1;
           color: ${colors.primary};
         }

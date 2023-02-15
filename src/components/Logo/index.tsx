@@ -1,17 +1,13 @@
 import { colors } from '@/styles/theme'
-import {
-  faChevronLeft,
-  faChevronRight
-} from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FaLessThan, FaGreaterThan } from 'react-icons/fa'
 
 const Logo = () => {
   return (
     <>
       <div>
-        <FontAwesomeIcon icon={faChevronLeft} />
+        <FaLessThan className='logo-icon less-than' />
         <span>AD</span>
-        <FontAwesomeIcon icon={faChevronRight} />
+        <FaGreaterThan className='logo-icon greater-than' />
       </div>
       <style jsx>{`
         div {
@@ -19,24 +15,25 @@ const Logo = () => {
           color: ${colors.primary};
           display: flex;
           align-items: center;
-          gap: 2px;
-          font-size: 1.7rem;
-          font-weight: 600;
+          gap: 5px;
         }
 
-        div > :global(svg) {
-          width: 1rem;
-          height: 1rem;
-        }
-
-        div:hover {
-          transition-property: gap, margin;
+        div:hover > :global(.logo-icon) {
+          transition-property: transform;
           transition-duration: 100ms;
-          margin-left: 2px;
-          gap: 0;
+          transition-timing-function: ease-in;
+        }
+
+        div:hover > :global(.less-than) {
+          transform: translate(3px);
+        }
+        div:hover > :global(.greater-than) {
+          transform: translate(-3px);
         }
 
         span {
+          font-weight: 600;
+          font-size: 1.7rem;
           color: ${colors.white};
         }
       `}</style>

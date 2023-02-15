@@ -1,8 +1,8 @@
 import useContent from '@/hooks/useContent'
 import { animations } from '@/styles/animations'
 import { breakPoints, colors, headerConfig } from '@/styles/theme'
-import { faXmark } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { HiXMark } from 'react-icons/hi2'
+
 import Link from 'next/link'
 import React from 'react'
 import LanguageSelector from '../LanguageSelector'
@@ -21,7 +21,7 @@ const AppNavbar = ({ toggle, onClose }: Props) => {
         style={{ '--display': toggle ? 'flex' : 'none' } as React.CSSProperties}
       >
         <button type='button' onClick={onClose}>
-          <FontAwesomeIcon icon={faXmark} />
+          <HiXMark className='x-mark' />
         </button>
         <ul>
           {navbarArr.map(item => (
@@ -64,8 +64,8 @@ const AppNavbar = ({ toggle, onClose }: Props) => {
           position: absolute;
           top: 15px;
           right: 15px;
-          width: 35px;
-          height: 35px;
+          font-size: 1.5rem;
+          font-weight: bold;
         }
 
         li > :global(a) {

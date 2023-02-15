@@ -33,6 +33,7 @@ export interface Url {
 export interface SoftSkill {
   type: string
   image: string
+  description: string
 }
 
 export interface TechSkill {

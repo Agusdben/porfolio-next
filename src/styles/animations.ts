@@ -11,7 +11,7 @@ export const animations = {
 export default css.global`
   @keyframes ${animations.appear} {
     0% {
-      opacity: 0;
+      opacity: 0.5;
     }
     100% {
       opacity: 1;

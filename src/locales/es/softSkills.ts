@@ -3,23 +3,33 @@ import { SoftSkill } from '@/types'
 const SOFT_SKILLS: SoftSkill[] = [
   {
     type: 'Autodidacta',
-    image: ''
+    description:
+      'Siempre fui curioso, me gusta descubrir y explorar sobre temas que me gustan.',
+    image: 'working-bro.png'
   },
   {
     type: 'Trabajo en equipo',
-    image: ''
+    description:
+      'Me gusta compartir experiencias en grupo, y poder llegar a resultados mas rápidamente.',
+    image: 'team-work-bro.png'
   },
   {
     type: 'Pensamiento critico',
-    image: ''
+    description:
+      'Hay situaciones las cuales requieren dejar de lado las creencias y experiencias para poder llegar al objetivo.',
+    image: 'critical thinking-bro.png'
   },
   {
     type: 'Resolución de problemas',
-    image: ''
+    description:
+      'Hallar soluciones a problemas me motiva a investigar y aprender más sobre este mundo.',
+    image: 'problem solving-rafiki.png'
   },
   {
     type: 'Manejo del tiempo',
-    image: ''
+    description:
+      'El equilibrio es importante en el día a día, por eso me gusta dividir el tiempo en actividades que me gustan.',
+    image: 'wristwatch-bro.png'
   }
 ]
 

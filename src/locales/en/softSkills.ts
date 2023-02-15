@@ -3,28 +3,28 @@ import { SoftSkill } from '@/types'
 const SOFT_SKILLS: SoftSkill[] = [
   {
     type: 'Autodidact',
-    logo: 'user-pen.svg',
-    image: ''
+    description: '',
+    image: 'working-bro.png'
   },
   {
     type: 'Good teamwork',
-    logo: '',
-    image: ''
+    description: '',
+    image: 'team-work-bro.png'
   },
   {
     type: 'Critical thinking',
-    logo: '',
-    image: ''
+    description: '',
+    image: 'critical thinking-bro.png'
   },
   {
     type: 'Problem solving',
-    logo: '',
-    image: ''
+    description: '',
+    image: 'problem solving-rafiki.png'
   },
   {
     type: 'Time management',
-    logo: '',
-    image: ''
+    description: '',
+    image: 'wristwatch-bro.png'
   }
 ]
 

@@ -1,10 +1,9 @@
 import Logo from '../Logo'
-import { breakPoints, colors } from '@/styles/theme'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { breakPoints, colors, headerConfig } from '@/styles/theme'
 import React, { useState } from 'react'
 import AppNavbar from '../AppNavbar'
 import LanguageSelector from '../LanguageSelector'
+import { FaBars } from 'react-icons/fa'
 
 const AppHeader = () => {
   const [menuToggle, setMenuToggle] = useState<boolean>(false)
@@ -23,13 +22,13 @@ const AppHeader = () => {
           <Logo />
         </button>
         <section>
+          <AppNavbar toggle={menuToggle} onClose={handleMenuToggle} />
           <div className='language-selector'>
             <LanguageSelector />
           </div>
           <button type='button' onClick={handleMenuToggle}>
-            <FontAwesomeIcon icon={faBars} />
+            <FaBars className='fa-bars' />
           </button>
-          <AppNavbar toggle={menuToggle} onClose={handleMenuToggle} />
         </section>
       </header>
       <style jsx>{`
@@ -46,7 +45,7 @@ const AppHeader = () => {
         }
 
         button > :global(svg) {
-          width: 30px;
+          font-size: 1.3rem;
           aspect-ratio: 1/1;
           color: ${colors.primary};
         }
@@ -58,9 +57,23 @@ const AppHeader = () => {
         }
 
         @media (min-width: ${breakPoints.desktop}) {
-          .language-selector,
           section button {
             display: none;
+          }
+
+          header {
+            width: ${headerConfig.desktop.width};
+            height: 100vh;
+            gap: 2rem;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 1px 0px 1px ${colors.primary};
+          }
+
+          section {
+            flex: 1;
+            flex-direction: column;
+            justify-content: space-between;
           }
         }
       `}</style>

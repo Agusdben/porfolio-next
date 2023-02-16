@@ -19,8 +19,8 @@ const Skills = () => {
       </ContentSection>
       <style jsx>{`
         ul {
+          overflow: hidden;
           max-width: 768px;
-          margin: auto;
           display: flex;
           flex-wrap: wrap;
           justify-content: center;
@@ -29,7 +29,6 @@ const Skills = () => {
 
         li {
           transform: translate(50px);
-          opacity: 0.75;
           animation: ${animations.toLeft} 200ms ease-in forwards;
         }
       `}</style>

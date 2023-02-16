@@ -2,18 +2,52 @@ import css from 'styled-jsx/css'
 
 export const animations = {
   toLeft: 'toLeft',
+  toRight: 'toRight',
   morphingBorder: 'morphingBorder',
-  fallAndBounce: 'fallAndBounce'
+  fallAndBounce: 'fallAndBounce',
+  appear: 'appear',
+  shake: 'shake'
 }
 
 export default css.global`
-  @keyframes ${animations.toLeft} {
+  @keyframes ${animations.shake} {
+    0%,
+    100% {
+      transform: translate(0);
+    }
+
+    33% {
+      transform: translate(-10px);
+    }
+
+    66% {
+      transform: translate(10px);
+    }
+  }
+
+  @keyframes ${animations.appear} {
     0% {
-      opacity: 0.75;
-      transform: translate(50px);
+      opacity: 0.5;
     }
     100% {
       opacity: 1;
+    }
+  }
+
+  @keyframes ${animations.toLeft} {
+    0% {
+      transform: translate(100%);
+    }
+    100% {
+      transform: translate(0px);
+    }
+  }
+
+  @keyframes ${animations.toRight} {
+    0% {
+      transform: translate(-100%);
+    }
+    100% {
       transform: translate(0px);
     }
   }
@@ -38,7 +72,7 @@ export default css.global`
 
   @keyframes ${animations.fallAndBounce} {
     0% {
-      transform: translate(0px, -50px);
+      transform: translate(0px, -25px);
     }
     50% {
       transform: translate(0px, 0px);

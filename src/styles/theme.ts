@@ -4,7 +4,13 @@ export const fonts = {
 
 export const breakPoints = {
   tablet: '768px',
-  desktop: '1920px'
+  desktop: '1600px'
+}
+
+export const headerConfig = {
+  desktop: {
+    width: '220px'
+  }
 }
 
 export const colors = {

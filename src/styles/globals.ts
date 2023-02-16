@@ -1,5 +1,5 @@
 import css from 'styled-jsx/css'
-import { colors, fonts } from './theme'
+import { breakPoints, colors, fonts, headerConfig } from './theme'
 
 export default css.global`
   *,
@@ -9,7 +9,7 @@ export default css.global`
   }
 
   html {
-    --scroll-behavior: smooth !important; /** because in nexjs smooth not working without !important */
+    --scroll-behavior: smooth !important; /** because in nextjs smooth not working without !important */
     scroll-behavior: smooth !important;
     scroll-padding-top: 75px;
   }
@@ -53,7 +53,6 @@ export default css.global`
     flex: 1;
     padding: 0 12px;
     width: 100%;
-    max-width: 1400px;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -66,5 +65,16 @@ export default css.global`
 
   body::-webkit-scrollbar-thumb {
     background-color: ${colors.primary};
+  }
+
+  @media (min-width: ${breakPoints.desktop}) {
+    html {
+      scroll-padding-top: 0;
+    }
+    main,
+    .app > :global(footer) {
+      width: calc(100vw - ${headerConfig.desktop.width});
+      margin-left: ${headerConfig.desktop.width};
+    }
   }
 `

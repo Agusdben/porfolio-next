@@ -21,15 +21,14 @@ export enum FormFields {
   message = 'message'
 }
 
-export interface Navbar {
-  [key: string]: string
+export enum SendingStatuses {
+  loading = 'loading',
+  error = 'error',
+  success = 'success'
 }
 
-export interface SvgProps {
-  fill?: string
-  stroke?: string
-  width: number
-  height: number
+export interface Navbar {
+  [key: string]: string
 }
 
 export interface Url {
@@ -72,6 +71,7 @@ export type ContactForm = {
     [key in FormFields]: ContactFormFields
   }
   button: string
+  sendingStatus: { [key in SendingStatuses]: string }
 }
 
 export interface Content {

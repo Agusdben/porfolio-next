@@ -20,7 +20,12 @@ const CONTACT_FORM: ContactForm = {
       placeholder: 'Escriba aquí su mensaje...*'
     }
   },
-  button: 'Enviar!'
+  button: 'Enviar!',
+  sendingStatus: {
+    error: 'No se pudo enviar el mensaje',
+    loading: 'Enviando...',
+    success: 'Mensaje enviado!'
+  }
 }
 
 export default CONTACT_FORM

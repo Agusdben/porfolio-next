@@ -23,7 +23,7 @@ const SOFT_SKILLS: SoftSkill[] = [
     type: 'Resolución de problemas',
     description:
       'Hallar soluciones a problemas me motiva a investigar y aprender más sobre este mundo.',
-    image: 'problem solving-rafiki.svg'
+    image: 'problem-solving-rafiki.svg'
   },
   {
     type: 'Manejo del tiempo',

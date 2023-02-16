@@ -1,8 +1,16 @@
+import { mailOptions, transporter } from '@/config/nodemailer'
 import { NextApiRequest, NextApiResponse } from 'next'
 import { FormFields } from '../../types'
 
 const badRequest = (res: NextApiResponse) => {
   return res.status(400).json({ message: 'Bad Request' })
+}
+
+function generateText<t extends { [s: string]: unknown }> (body: t): string {
+  return Object.entries(body).reduce(
+    (str, [key, val]) => (str += `${key}: \n${val} \n \n`),
+    ''
+  )
 }
 
 export default async function handler (
@@ -26,13 +34,25 @@ export default async function handler (
     return badRequest(res)
   }
 
-  if (bodyKeys.some(key => !expectedKeys.hasOwnProperty(key))) {
-    return badRequest(res)
+  for (const key of bodyKeys) {
+    if (!expectedKeys.includes(key)) {
+      return badRequest(res)
+    }
   }
 
   if (bodyValues.some(item => item === '')) {
     return badRequest(res)
   }
 
-  // continuar con nodemailer :)
+  try {
+    await transporter.sendMail({
+      ...mailOptions,
+      text: generateText<{ [key in FormFields]: string }>(body),
+      subject: body.subject
+    })
+
+    return res.status(200).json({ success: true })
+  } catch (error: any) {
+    return res.status(400).json({ message: error.message })
+  }
 }

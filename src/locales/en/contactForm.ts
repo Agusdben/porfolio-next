@@ -20,7 +20,12 @@ const CONTACT_FORM: ContactForm = {
       placeholder: 'Type here your message...*'
     }
   },
-  button: 'Send!'
+  button: 'Send!',
+  sendingStatus: {
+    error: 'Could not send message.',
+    loading: 'Sending...',
+    success: 'Message sent!'
+  }
 }
 
 export default CONTACT_FORM

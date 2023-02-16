@@ -1,5 +1,8 @@
 import { contactFormPatterns, fieldsMaxLength } from '@/constants/contactForm'
 import useContent from '@/hooks/useContent'
+import { sendMail } from '@/services/mail'
+import { animations } from '@/styles/animations'
+import { colors } from '@/styles/theme'
 import { FormFields } from '@/types'
 import React, { useState } from 'react'
 import Button from '../Button'
@@ -15,9 +18,10 @@ type States = {
 const ContactForm = () => {
   const {
     contactForm,
-    contactForm: { fields }
+    contactForm: { fields },
+    contactForm: { sendingStatus }
   } = useContent()
-  const [isSending, setIsSending] = useState<States['Sending']>(false)
+  const [formStatus, setFormStatus] = useState<string>('')
   const [formData, setFormData] = useState<States['FormData']>({
     name: '',
     email: '',
@@ -25,8 +29,15 @@ const ContactForm = () => {
     message: ''
   })
 
-  const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleOnSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setFormStatus(sendingStatus.loading)
+    try {
+      await sendMail(formData)
+      setFormStatus(sendingStatus.success)
+    } catch (error: any) {
+      setFormStatus(sendingStatus.error)
+    }
   }
 
   const handleOnChange = (
@@ -99,6 +110,19 @@ const ContactForm = () => {
           onChange={handleOnChange}
         />
         <Button type='submit'>{contactForm.button}</Button>
+        {formStatus && (
+          <p
+            className={`form-status ${
+              formStatus === sendingStatus.success
+                ? 'success'
+                : formStatus === sendingStatus.loading
+                ? 'loading'
+                : 'error'
+            }`}
+          >
+            {formStatus}
+          </p>
+        )}
       </form>
       <style jsx>{`
         form {
@@ -113,6 +137,20 @@ const ContactForm = () => {
         form > :global(button) {
           font-size: 1.2rem;
           padding: 10px;
+        }
+
+        .form-status {
+          margin: 0;
+        }
+
+        .form-status.error {
+          color: red;
+        }
+        .form-status.success {
+          color: ${colors.primary};
+        }
+        .form-status.loading {
+          animation: ${animations.appear} 1000ms infinite;
         }
       `}</style>
     </>

@@ -15,15 +15,16 @@ const AppBackground = () => {
           display: flex;
           align-items: center;
           justify-content: center;
-          background-size: 250% 250%;
+          background-size: 300% 300%;
           filter: contrast(115%);
           background-image: linear-gradient(
-            -30deg,
+            -45deg,
             ${colors.black} 0%,
             ${colors.secondary} 51%,
             ${colors.tertiary} 100%
           );
-          animation: AnimateBG 15s ease infinite;
+
+          animation: AnimateBG 10s ease-out infinite;
         }
 
         @keyframes AnimateBG {

@@ -1,7 +1,7 @@
 import { FormFields } from '@/types'
 
 export const contactFormPatterns: { [key in FormFields]: RegExp } = {
-  name: new RegExp(/^[a-zA-Z\\s]{1,50}$/),
+  name: new RegExp(/^[a-zA-Z\s]{1,50}$/),
   email: new RegExp(
     /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/
   ),

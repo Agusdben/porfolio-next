@@ -75,8 +75,8 @@ const SoftSkills = () => {
           </div>
           <Image
             className={animate}
-            width={300}
-            height={300}
+            width={250}
+            height={250}
             src={`/images/${softSkills[currentIndex].image}`}
             alt={`Image that represent ${softSkills[currentIndex].type}`}
           />
@@ -133,7 +133,7 @@ const SoftSkills = () => {
           align-items: center;
           background: ${colors.black};
           width: 100%;
-          height: 100%;
+          min-height: 100%;
           font-size: 1.2rem;
         }
 
@@ -146,6 +146,7 @@ const SoftSkills = () => {
         }
 
         .current-skill h3 {
+          margin: 0;
           display: flex;
           align-items: center;
           gap: 8px;
@@ -159,6 +160,7 @@ const SoftSkills = () => {
         .current-skill > :global(img) {
           filter: drop-shadow(0 0 20px ${colors.primary});
         }
+
         .current-skill.animate > :global(img) {
           animation: ${animations.toLeft} 400ms;
         }
@@ -175,6 +177,11 @@ const SoftSkills = () => {
         }
 
         @media (min-width: ${breakPoints.tablet}) {
+          .current-skill > :global(img) {
+            width: 300px;
+            height: auto;
+          }
+
           .container {
             flex-direction: row-reverse;
           }

@@ -94,7 +94,7 @@ const ContactForm = () => {
           error={fields.message.error}
           value={formData.message}
           name={FormFields.message}
-          isTextArea
+          type='text area'
           required
           onChange={handleOnChange}
         />
@@ -102,9 +102,17 @@ const ContactForm = () => {
       </form>
       <style jsx>{`
         form {
+          width: 100%;
+          min-width: 280px;
+          max-width: 500px;
           display: flex;
           flex-direction: column;
           gap: 1.2rem;
+        }
+
+        form > :global(button) {
+          font-size: 1.2rem;
+          padding: 10px;
         }
       `}</style>
     </>

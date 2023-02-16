@@ -20,6 +20,10 @@ const Button = ({ type, onClick, children, disabled }: Props) => {
           border: 1px solid ${colors.tertiary};
           padding: 4px 8px;
         }
+
+        button:hover {
+          background-color: ${colors.tertiary};
+        }
       `}</style>
     </>
   )

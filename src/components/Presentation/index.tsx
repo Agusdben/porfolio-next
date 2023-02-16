@@ -99,6 +99,8 @@ const Presentation = () => {
 
         .links {
           display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
           align-items: center;
           gap: 1rem;
         }
@@ -112,6 +114,9 @@ const Presentation = () => {
           .image {
             width: 350px;
             object-position: center;
+          }
+          .links {
+            justify-content: start;
           }
         }
       `}</style>

@@ -5,21 +5,21 @@ import { animations } from '@/styles/animations'
 
 interface Props
   extends InputHTMLAttributes<HTMLInputElement | HTMLTextAreaElement> {
-  isTextArea?: boolean
+  type: 'text' | 'email' | 'text area'
   error: string
   onChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void
 }
 
 const TextInput: React.FC<Props> = ({
-  isTextArea,
   error,
   maxLength,
   onChange,
+  type,
   ...rest
 }) => {
   const [currentLength, setCurrentLength] = useState<number>(0)
   const [focused, setFocused] = useState<string>('')
-  const InputComponent = isTextArea ? 'textarea' : 'input'
+  const InputComponent = type === 'text area' ? 'textarea' : 'input'
 
   const handleFocused = () => {
     setFocused('focused')
@@ -66,10 +66,12 @@ const TextInput: React.FC<Props> = ({
       </div>
       <style jsx>{`
         div {
-          display: grid;
+          display: flex;
+          margin: auto;
+
           flex-direction: column;
           gap: 0.5rem;
-          width: 280px;
+          width: 100%;
         }
 
         input,

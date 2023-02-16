@@ -19,6 +19,7 @@ const Skills = () => {
       </ContentSection>
       <style jsx>{`
         ul {
+          overflow: hidden;
           max-width: 768px;
           display: flex;
           flex-wrap: wrap;

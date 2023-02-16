@@ -4,27 +4,27 @@ const SOFT_SKILLS: SoftSkill[] = [
   {
     type: 'Autodidact',
     description: '',
-    image: 'working-bro.png'
+    image: 'working-bro.svg'
   },
   {
     type: 'Good teamwork',
     description: '',
-    image: 'team-work-bro.png'
+    image: 'team-work-bro.svg'
   },
   {
     type: 'Critical thinking',
     description: '',
-    image: 'critical thinking-bro.png'
+    image: 'critical-thinking-bro.svg'
   },
   {
     type: 'Problem solving',
     description: '',
-    image: 'problem solving-rafiki.png'
+    image: 'problem solving-rafiki.svg'
   },
   {
     type: 'Time management',
     description: '',
-    image: 'wristwatch-bro.png'
+    image: 'wristwatch-bro.svg'
   }
 ]
 

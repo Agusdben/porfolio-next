@@ -42,7 +42,7 @@ const SoftSkills = () => {
       setCurrentIndex(current => {
         return current === softSkills.length - 1 ? 0 : current + 1
       })
-    }, 10000)
+    }, 13000)
 
     !autoSwap && clearInterval(interval)
 
@@ -67,7 +67,10 @@ const SoftSkills = () => {
         </div>
         <div className={`current-skill ${animate}`}>
           <div className={`current-skill__content ${animate}`}>
-            <h3>{softSkills[currentIndex].type}</h3>
+            <h3>
+              <span>{icons[softSkills[currentIndex].type]}</span>
+              <span>{softSkills[currentIndex].type}</span>
+            </h3>
             <p>&quot;{softSkills[currentIndex].description}&quot;</p>
           </div>
           <Image
@@ -82,6 +85,8 @@ const SoftSkills = () => {
       <style jsx>{`
         .container {
           font-size: 1.2rem;
+          max-width: 1600px;
+          margin: auto;
           padding: 0.5rem;
           display: flex;
           flex-direction: column;
@@ -141,6 +146,9 @@ const SoftSkills = () => {
         }
 
         .current-skill h3 {
+          display: flex;
+          align-items: center;
+          gap: 8px;
           color: ${colors.primary};
         }
 

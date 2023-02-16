@@ -5,10 +5,26 @@ export const animations = {
   toRight: 'toRight',
   morphingBorder: 'morphingBorder',
   fallAndBounce: 'fallAndBounce',
-  appear: 'appear'
+  appear: 'appear',
+  shake: 'shake'
 }
 
 export default css.global`
+  @keyframes ${animations.shake} {
+    0%,
+    100% {
+      transform: translate(0);
+    }
+
+    33% {
+      transform: translate(-10px);
+    }
+
+    66% {
+      transform: translate(10px);
+    }
+  }
+
   @keyframes ${animations.appear} {
     0% {
       opacity: 0.5;
@@ -56,7 +72,7 @@ export default css.global`
 
   @keyframes ${animations.fallAndBounce} {
     0% {
-      transform: translate(0px, -50px);
+      transform: translate(0px, -25px);
     }
     50% {
       transform: translate(0px, 0px);

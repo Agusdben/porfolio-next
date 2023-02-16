@@ -22,6 +22,8 @@ const ContentSection = ({ id, title, children }: Props) => {
       <style jsx>{`
         section {
           min-height: 100vh;
+          padding: 1rem 0;
+
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -37,7 +39,6 @@ const ContentSection = ({ id, title, children }: Props) => {
 
         div {
           position: relative;
-
           flex: 1;
           height: 100%;
           display: flex;

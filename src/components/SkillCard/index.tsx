@@ -1,6 +1,5 @@
 import { colors } from '@/styles/theme'
 import { TechSkill } from '@/types'
-import { addOpacityToColor } from '@/utiles'
 import Image from 'next/image'
 import React from 'react'
 

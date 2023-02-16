@@ -6,6 +6,7 @@ import PROJECTS from './projects'
 import RESUME from './resume'
 import SKILLS from './skills'
 import SOFT_SKILLS from './softSkills'
+import CONTACT_FORM from './contactForm'
 
 const GLOBAL: Content = {
   footer: FOOTER,
@@ -14,7 +15,8 @@ const GLOBAL: Content = {
   projects: PROJECTS,
   resume: RESUME,
   skills: Object.values(SKILLS),
-  softSkills: SOFT_SKILLS
+  softSkills: SOFT_SKILLS,
+  contactForm: CONTACT_FORM
 }
 
 export default GLOBAL

@@ -28,7 +28,6 @@ const Skills = () => {
 
         li {
           transform: translate(50px);
-          opacity: 0.75;
           animation: ${animations.toLeft} 200ms ease-in forwards;
         }
       `}</style>

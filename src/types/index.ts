@@ -14,6 +14,13 @@ export enum Skills {
   API_REST = 'Api REST'
 }
 
+export enum FormFields {
+  name = 'name',
+  email = 'email',
+  subject = 'subject',
+  message = 'message'
+}
+
 export interface Navbar {
   [key: string]: string
 }
@@ -55,6 +62,18 @@ export interface Footer {
   createdBy: string
 }
 
+export interface ContactFormFields {
+  error: string
+  placeholder: string
+}
+
+export type ContactForm = {
+  fields: {
+    [key in FormFields]: ContactFormFields
+  }
+  button: string
+}
+
 export interface Content {
   navbar: Navbar
   presentation: string
@@ -63,4 +82,5 @@ export interface Content {
   skills: TechSkill[]
   projects: Project[]
   footer: Footer
+  contactForm: ContactForm
 }

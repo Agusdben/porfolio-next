@@ -131,7 +131,11 @@ const SoftSkills = () => {
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          background: ${colors.black};
+          background-image: linear-gradient(
+            -45deg,
+            ${colors.secondary} 0%,
+            ${colors.black} 100%
+          );
           width: 100%;
           min-height: 100%;
           font-size: 1.2rem;

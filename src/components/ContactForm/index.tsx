@@ -113,11 +113,13 @@ const ContactForm = () => {
         {formStatus && (
           <p
             className={`form-status ${
-              formStatus === sendingStatus.success
-                ? 'success'
+              formStatus === sendingStatus.error
+                ? 'error'
                 : formStatus === sendingStatus.loading
                 ? 'loading'
-                : 'error'
+                : formStatus === sendingStatus.success
+                ? 'success'
+                : ''
             }`}
           >
             {formStatus}

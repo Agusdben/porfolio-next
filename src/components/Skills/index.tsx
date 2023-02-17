@@ -11,7 +11,7 @@ const Skills = () => {
       <ContentSection id={navbar.skills} title={navbar.skills}>
         <ul>
           {skills.map((s, i) => (
-            <li key={s.type} style={{ animationDelay: `${75 * (i / 2)}ms` }}>
+            <li key={s.type} style={{ animationDuration: `${70 + 70 * i}ms` }}>
               <SkillCard level={s.level} logo={s.logo} type={s.type} />
             </li>
           ))}
@@ -28,8 +28,8 @@ const Skills = () => {
         }
 
         li {
-          transform: translate(50px);
-          animation: ${animations.toLeft} 200ms ease-in forwards;
+          animation-name: ${animations.toLeft};
+          animation-duration: 200ms;
         }
       `}</style>
     </>

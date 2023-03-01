@@ -128,6 +128,7 @@ const ContactForm = () => {
       </form>
       <style jsx>{`
         form {
+          margin: auto;
           width: 100%;
           min-width: 280px;
           max-width: 500px;

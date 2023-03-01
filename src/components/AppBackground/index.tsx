@@ -16,12 +16,11 @@ const AppBackground = () => {
           align-items: center;
           justify-content: center;
           background-size: 300% 300%;
-          filter: contrast(115%);
+          filter: brightness(85%);
           background-image: linear-gradient(
             -45deg,
             ${colors.black} 0%,
-            ${colors.secondary} 51%,
-            ${colors.tertiary} 100%
+            ${colors.secondary} 100%
           );
 
           animation: AnimateBG 10s ease-out infinite;

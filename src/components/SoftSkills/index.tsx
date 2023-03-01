@@ -116,7 +116,6 @@ const SoftSkills = () => {
         button:hover,
         .focused {
           background-color: ${colors.secondary};
-          color: ${colors.primary};
         }
 
         .btn-change {
@@ -131,13 +130,10 @@ const SoftSkills = () => {
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          background-image: linear-gradient(
-            -45deg,
-            ${colors.secondary} 0%,
-            ${colors.black} 100%
-          );
+          background-color: ${colors.black};
           width: 100%;
-          min-height: 100%;
+          height: 100%;
+          padding: 1rem 0;
           font-size: 1.2rem;
         }
 

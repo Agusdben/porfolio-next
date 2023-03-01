@@ -112,7 +112,7 @@ const Presentation = () => {
             gap: 100px;
           }
           .image {
-            width: 350px;
+            width: 400px;
             object-position: center;
           }
           .links {

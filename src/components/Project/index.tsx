@@ -53,6 +53,9 @@ const Project = ({ project }: Props) => {
           border-radius: 8px;
           font-size: 1.1rem;
         }
+        h3 {
+          color: ${colors.primary};
+        }
 
         h3,
         p {
@@ -75,7 +78,7 @@ const Project = ({ project }: Props) => {
         }
 
         .urls {
-          border-top: 5px solid ${colors.tertiary};
+          border-top: 2px solid ${colors.primary};
           padding-top: 1rem;
           display: grid;
           gap: 0.5rem;

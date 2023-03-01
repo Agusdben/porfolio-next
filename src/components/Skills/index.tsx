@@ -9,15 +9,24 @@ const Skills = () => {
   return (
     <>
       <ContentSection id={navbar.skills} title={navbar.skills}>
-        <ul>
-          {skills.map((s, i) => (
-            <li key={s.type} style={{ animationDuration: `${70 + 70 * i}ms` }}>
-              <SkillCard level={s.level} logo={s.logo} type={s.type} />
-            </li>
-          ))}
-        </ul>
+        <article>
+          <ul>
+            {skills.map((s, i) => (
+              <li
+                key={s.type}
+                style={{ animationDuration: `${70 + 70 * i}ms` }}
+              >
+                <SkillCard level={s.level} logo={s.logo} type={s.type} />
+              </li>
+            ))}
+          </ul>
+        </article>
       </ContentSection>
       <style jsx>{`
+        article {
+          min-height: 100%;
+          margin: auto;
+        }
         ul {
           overflow: hidden;
           max-width: 768px;

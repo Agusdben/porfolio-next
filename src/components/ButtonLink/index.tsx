@@ -19,12 +19,14 @@ const ButtonLink = ({ href, children, target, rel }: Props) => {
       </Link>
       <style jsx>{`
         span > :global(a) {
-          color: ${colors.primary};
+          color: ${colors.white};
+          border-radius: 4px;
           border: 1px solid ${colors.tertiary};
           padding: 8px 12px;
           gap: 4px;
           display: flex;
           align-items: center;
+          justify-content: center;
         }
 
         span > :global(a):hover {

@@ -1,3 +1,3 @@
-const RESUME = 'Di-Benedetto_Agustin_EN.pdf'
+const RESUME = 'CV-Agustin-Di-Benedetto-EN.pdf'
 
 export default RESUME

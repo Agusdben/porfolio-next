@@ -40,7 +40,6 @@ const ImageCarousel = ({ images }: Props) => {
 
   useEffect(() => {
     if (images.length === 1) {
-      console.log(images)
       return
     }
     const interval = setInterval(() => {

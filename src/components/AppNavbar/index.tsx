@@ -4,7 +4,7 @@ import { breakPoints, colors, headerConfig } from '@/styles/theme'
 import { HiXMark } from 'react-icons/hi2'
 
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import LanguageSelector from '../LanguageSelector'
 
 interface Props {
@@ -14,7 +14,14 @@ interface Props {
 
 const AppNavbar = ({ toggle, onClose }: Props) => {
   const { navbar } = useContent()
+  const [lastClicked, setLastClicked] = useState<string>('')
   const navbarArr = Object.values(navbar)
+
+  const handleListClick = (path: string) => {
+    setLastClicked(path)
+    onClose()
+  }
+
   return (
     <>
       <nav
@@ -24,9 +31,13 @@ const AppNavbar = ({ toggle, onClose }: Props) => {
           <HiXMark className='x-mark' />
         </button>
         <ul>
-          {navbarArr.map(item => (
-            <li key={item} onClick={onClose}>
-              <Link href={`#${item}`}>{item}</Link>
+          {navbarArr.map(path => (
+            <li
+              key={path}
+              onClick={() => handleListClick(path)}
+              className={`${lastClicked === path ? 'active' : ''}`}
+            >
+              <Link href={`#${path}`}>{path}</Link>
             </li>
           ))}
         </ul>
@@ -78,7 +89,8 @@ const AppNavbar = ({ toggle, onClose }: Props) => {
         }
 
         @media (min-width: ${breakPoints.tablet}) {
-          li > :global(a):hover {
+          li > :global(a):hover,
+          li.active > :global(a) {
             transition-property: background-color, color;
             transition-duration: 75ms;
             transition-timing-function: ease-in;
@@ -108,7 +120,22 @@ const AppNavbar = ({ toggle, onClose }: Props) => {
           }
 
           li > :global(a) {
+            position: relative;
             color: ${colors.white};
+          }
+
+          li > :global(a):hover::after {
+            content: '>';
+          }
+          li > :global(a):hover::before {
+            content: '<';
+          }
+
+          li.active > :global(a)::after {
+            content: '>';
+          }
+          li.active > :global(a)::before {
+            content: '<';
           }
         }
       `}</style>

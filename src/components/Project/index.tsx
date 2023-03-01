@@ -3,19 +3,34 @@ import { Project } from '@/types'
 import Image from 'next/image'
 import { RxExternalLink } from 'react-icons/rx'
 import ButtonLink from '../ButtonLink'
+import ImageCarousel from '../ImageCarousel'
 interface Props {
   project: Project
 }
 
 const Project = ({ project }: Props) => {
+  const images = project.images.map((img, i) => ({
+    src: img,
+    alt: `Image ${i} of project ${project.title}`
+  }))
+
   return (
     <>
       <div className='container'>
         <h3>{project.title}</h3>
-        <div className='picture'>
-          <Image fill alt='' src={`/images/projects/${project.images[0]}`} />
-        </div>
+        <ImageCarousel images={images} />
         <p>{project.description}</p>
+        <div className='techs'>
+          {project.skills.map(s => (
+            <Image
+              key={s.type}
+              alt={`Logo of ${s.type}`}
+              src={s.logo}
+              width={18}
+              height={18}
+            />
+          ))}
+        </div>
         <div className='urls'>
           <div className='repositories'>
             {project.repositories.map(url => (
@@ -77,25 +92,22 @@ const Project = ({ project }: Props) => {
           flex: 1;
         }
 
+        .techs {
+          display: flex;
+          gap: 1rem;
+          padding: 0.5rem;
+          background-color: ${colors.tertiary};
+        }
+
+        .techs > :global(img) {
+          object-fit: contain;
+        }
+
         .urls {
           border-top: 2px solid ${colors.primary};
           padding-top: 1rem;
           display: grid;
           gap: 0.5rem;
-        }
-
-        .picture {
-          width: 100%;
-          margin: auto;
-          max-width: 100%;
-          aspect-ratio: 16/9;
-          position: relative;
-        }
-
-        picture > :global(img) {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
         }
       `}</style>
     </>

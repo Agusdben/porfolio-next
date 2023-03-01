@@ -5,7 +5,7 @@ const PROJECTS: Project[] = [
   {
     title: 'ToDo List',
     description:
-      'Aplicación web realizada con Reactjs, donde creo una api con Nodejs, express y mongoDB para poder registrar usuarios y hacer un CRUD de tareas.',
+      'Web application made with Reactjs, where I create an API with Nodejs, Express and MongoDB to register users and perform CRUD operations on tasks.',
     images: [
       'todo-list/todos_add.png',
       'todo-list/todos_black.png',
@@ -34,7 +34,7 @@ const PROJECTS: Project[] = [
   {
     title: 'Fake Giphy',
     description:
-      'Aplicación web que utiliza la api pública GIPHY, donde puedes buscar gifs, agregarlos a favoritos, ver tu última búsqueda y más.',
+      'Web application that uses the public GIPHY API, where you can search for GIFs, add them to favorites, view your last search, and more.',
     images: [
       'fakegiphy/fakegiphy_home.png',
       'fakegiphy/fakegiphy_search.png',
@@ -52,7 +52,7 @@ const PROJECTS: Project[] = [
   {
     title: 'Hangman',
     description:
-      'El juego del ahorcado ¡Podrás elegir si jugar con pistas, o dejar morir al pobre hombre!',
+      'Hangman game. You can choose to play with hints or let the poor man die!',
     images: [
       'hangman/hangman-index.jpg',
       'hangman/hangman-play.jpg',
@@ -70,7 +70,7 @@ const PROJECTS: Project[] = [
   {
     title: 'Easy maze',
     description:
-      'Juego que cuenta con 12 niveles, donde tienes que escapar de distintos laberintos.',
+      'Game with 12 levels where you have to escape from different mazes.',
     images: [
       'easy-maze/easy-maze-menu.jpg',
       'easy-maze/easy-maze-levels.jpg',
@@ -87,7 +87,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: 'QR Generator',
-    description: 'Sitio que te permite generar imagen QR a partir de un texto.',
+    description: 'Site that allows you to generate a QR image from a text.',
     images: ['qr-generator/qr-generator-1.jpg'],
     skills: [SKILLS.JAVA_SCRIPT, SKILLS.CSS3, SKILLS.HTML5],
     url: 'https://qrpngmaker.netlify.app/',
@@ -118,7 +118,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: 'Simon Says',
-    description: 'Desarrollado con javascript vanilla.',
+    description: 'Developed with vanilla JavaScript.',
     images: ['simon-says/simon-says-1.jpg'],
     skills: [SKILLS.JAVA_SCRIPT, SKILLS.CSS3, SKILLS.HTML5],
     url: 'https://simonalwayssays.netlify.app/',
@@ -131,7 +131,7 @@ const PROJECTS: Project[] = [
   },
   {
     title: 'Tasky',
-    description: 'Proyecto pequeño para aprender TypeScript con React.',
+    description: 'Small project to learn TypeScript with React.',
     images: ['tasky/tasky-index.jpg', 'tasky/tasky-task.jpg'],
     skills: [SKILLS.TYPE_SCRIPT, SKILLS.REACTJS, SKILLS.TAILWINDCSS],
     url: 'https://taskyts.netlify.app/',

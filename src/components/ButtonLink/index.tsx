@@ -19,7 +19,7 @@ const ButtonLink = ({ href, children, target, rel }: Props) => {
       </Link>
       <style jsx>{`
         span > :global(a) {
-          color: ${colors.white};
+          color: ${colors.primary};
           border-radius: 4px;
           border: 1px solid ${colors.tertiary};
           padding: 8px 12px;

@@ -92,11 +92,6 @@ const Presentation = () => {
           text-align: left;
         }
 
-        .content p:first-letter {
-          margin-left: 10px;
-          font-size: 1.3em;
-        }
-
         .links {
           display: flex;
           flex-wrap: wrap;

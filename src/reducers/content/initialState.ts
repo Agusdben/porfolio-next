@@ -6,6 +6,7 @@ import SOFT_SKILLS from '@/locales/es/softSkills'
 import SKILLS from '@/locales/es/skills'
 import PROJECTS from '@/locales/es/projects'
 import FOOTER from '@/locales/es/footer'
+import CONTACT_FORM from '@/locales/es/contactForm'
 
 export const CONTENT_INITIAL_STATE: Content = {
   navbar: NAVBAR,
@@ -14,5 +15,6 @@ export const CONTENT_INITIAL_STATE: Content = {
   softSkills: SOFT_SKILLS,
   skills: Object.values({ ...SKILLS }),
   projects: PROJECTS,
-  footer: FOOTER
+  footer: FOOTER,
+  contactForm: CONTACT_FORM
 }

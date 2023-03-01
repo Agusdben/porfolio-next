@@ -78,7 +78,8 @@ const Presentation = () => {
           border-radius: 30% 70% 30% 70% / 80% 20% 80% 20%;
           overflow: hidden;
           filter: drop-shadow(0 0 1px ${colors.primary});
-          animation: ${animations.morphingBorder} 30s ease infinite;
+          animation: ${animations.morphingBorder} 30s ease infinite,
+            ${animations.toLeft} 600ms linear;
         }
 
         .image > :global(img) {
@@ -86,13 +87,23 @@ const Presentation = () => {
           object-fit: cover;
         }
 
+        .content {
+          overflow-x: hidden;
+        }
+
+        .content > :global(h3) {
+          animation: ${animations.toRight} 300ms ease-in;
+        }
+
         .content p {
+          animation: ${animations.toRight} 500ms ease-in;
           max-width: 400px;
           line-height: 1.4em;
           text-align: left;
         }
 
         .links {
+          animation: ${animations.toRight} 700ms ease-in;
           display: flex;
           flex-wrap: wrap;
           justify-content: center;

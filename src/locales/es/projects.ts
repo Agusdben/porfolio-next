@@ -12,12 +12,12 @@ const PROJECTS: Project[] = [
       'todo-list/todos_white.png'
     ],
     skills: [
-      SKILLS.MONGODB,
-      SKILLS.EXPRESS,
-      SKILLS.REACTJS,
-      SKILLS.NODE,
+      SKILLS.MongoDB,
+      SKILLS.ExpressJS,
+      SKILLS.ReactJS,
+      SKILLS.NodeJS,
       SKILLS.CSS3,
-      SKILLS.API_REST
+      SKILLS['Api REST']
     ],
     url: 'https://mytodosmylife.netlify.app/',
     repositories: [
@@ -40,7 +40,7 @@ const PROJECTS: Project[] = [
       'fakegiphy/fakegiphy_search.png',
       'fakegiphy/fakegiphy_gif.png'
     ],
-    skills: [SKILLS.REACTJS, SKILLS.CSS3, SKILLS.API_REST],
+    skills: [SKILLS.ReactJS, SKILLS.CSS3, SKILLS['Api REST']],
     url: 'https://fakegiphy.netlify.app/',
     repositories: [
       {
@@ -58,7 +58,7 @@ const PROJECTS: Project[] = [
       'hangman/hangman-play.jpg',
       'hangman/hangman-tries.jpg'
     ],
-    skills: [SKILLS.REACTJS, SKILLS.TAILWINDCSS],
+    skills: [SKILLS.ReactJS, SKILLS.Tailwindcss],
     url: 'https://easyhangman.netlify.app/',
     repositories: [
       {
@@ -76,7 +76,7 @@ const PROJECTS: Project[] = [
       'easy-maze/easy-maze-levels.jpg',
       'easy-maze/easy-maze-options.jpg'
     ],
-    skills: [SKILLS.REACTJS, SKILLS.TAILWINDCSS, SKILLS.TYPE_SCRIPT],
+    skills: [SKILLS.ReactJS, SKILLS.Tailwindcss, SKILLS.TypeScript],
     url: 'https://easymaze.netlify.app/',
     repositories: [
       {
@@ -89,7 +89,7 @@ const PROJECTS: Project[] = [
     title: 'Generador QR',
     description: 'Sitio que te permite generar imagen QR a partir de un texto.',
     images: ['qr-generator/qr-generator-1.jpg'],
-    skills: [SKILLS.JAVA_SCRIPT, SKILLS.CSS3, SKILLS.HTML5],
+    skills: [SKILLS.JavaScript, SKILLS.CSS3, SKILLS.HTML5],
     url: 'https://qrpngmaker.netlify.app/',
     repositories: [
       {
@@ -107,7 +107,7 @@ const PROJECTS: Project[] = [
       'rock-paper-scissors/rps-draw.jpg',
       'rock-paper-scissors/rps-lose.jpg'
     ],
-    skills: [SKILLS.JAVA_SCRIPT, SKILLS.CSS3, SKILLS.HTML5],
+    skills: [SKILLS.JavaScript, SKILLS.CSS3, SKILLS.HTML5],
     url: 'https://rockpaperscissorsplay.netlify.app/',
     repositories: [
       {
@@ -120,7 +120,7 @@ const PROJECTS: Project[] = [
     title: 'Simon Dice',
     description: 'Desarrollado con javascript vanilla.',
     images: ['simon-says/simon-says-1.jpg'],
-    skills: [SKILLS.JAVA_SCRIPT, SKILLS.CSS3, SKILLS.HTML5],
+    skills: [SKILLS.JavaScript, SKILLS.CSS3, SKILLS.HTML5],
     url: 'https://simonalwayssays.netlify.app/',
     repositories: [
       {
@@ -133,7 +133,7 @@ const PROJECTS: Project[] = [
     title: 'Tasky',
     description: 'Proyecto pequeño para aprender TypeScript con React.',
     images: ['tasky/tasky-index.jpg', 'tasky/tasky-task.jpg'],
-    skills: [SKILLS.TYPE_SCRIPT, SKILLS.REACTJS, SKILLS.TAILWINDCSS],
+    skills: [SKILLS.TypeScript, SKILLS.ReactJS, SKILLS.Tailwindcss],
     url: 'https://taskyts.netlify.app/',
     repositories: [
       {

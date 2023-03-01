@@ -14,7 +14,7 @@ const Skills = () => {
             {skills.map((s, i) => (
               <li
                 key={s.type}
-                style={{ animationDuration: `${70 + 70 * i}ms` }}
+                style={{ animationDuration: `${150 * (i + 1)}ms` }}
               >
                 <SkillCard level={s.level} logo={s.logo} type={s.type} />
               </li>

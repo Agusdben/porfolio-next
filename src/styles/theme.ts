@@ -15,7 +15,7 @@ export const headerConfig = {
 
 export const colors = {
   white: '#fafafafa',
-  black: '#190e2a',
+  black: '#120e2a',
   primary: '#cbaa00',
   secondary: '#1f1135',
   tertiary: '#271542'

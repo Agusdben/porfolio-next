@@ -1,6 +1,6 @@
 import { Skills, TechSkill } from '@/types'
 
-const SKILLS: { [key: string]: TechSkill } = {
+const SKILLS: { [key in Skills]: TechSkill } = {
   HTML5: {
     type: Skills.HTML5,
     level: 'Alto',
@@ -11,57 +11,57 @@ const SKILLS: { [key: string]: TechSkill } = {
     level: 'Alto',
     logo: '/logos/css3.png'
   },
-  JAVA_SCRIPT: {
+  JavaScript: {
     type: Skills.JAVA_SCRIPT,
     level: 'Alto',
     logo: '/logos/javascript.png'
   },
-  TYPE_SCRIPT: {
+  TypeScript: {
     type: Skills.TYPE_SCRIPT,
     level: 'Medio',
     logo: '/logos/typescript.png'
   },
-  TAILWINDCSS: {
+  Tailwindcss: {
     type: Skills.TAILWINDCSS,
     level: 'Alto',
     logo: '/logos/tailwindcss.png'
   },
-  REACTJS: {
+  ReactJS: {
     type: Skills.REACTJS,
     level: 'Alto',
     logo: '/logos/reactjs.png'
   },
-  NODE: {
+  NodeJS: {
     type: Skills.NODE,
     level: 'Medio',
     logo: '/logos/nodejs.png'
   },
-  EXPRESS: {
+  ExpressJS: {
     type: Skills.EXPRESS,
     level: 'Básico',
     logo: '/logos/express.png'
   },
-  MONGODB: {
+  MongoDB: {
     type: Skills.MONGODB,
     level: 'Básico',
     logo: '/logos/mongodb.png'
   },
-  MYSQL: {
+  MySQL: {
     type: Skills.MYSQL,
     level: 'Medio',
     logo: '/logos/mysql.png'
   },
-  GIT: {
+  Git: {
     type: Skills.GIT,
     level: 'Medio',
     logo: '/logos/git.png'
   },
-  GITHUB: {
+  GitHub: {
     type: Skills.GITHUB,
     level: 'Medio',
     logo: '/logos/github.png'
   },
-  API_REST: {
+  'Api REST': {
     type: Skills.API_REST,
     level: 'Medio',
     logo: '/logos/apirest.png'

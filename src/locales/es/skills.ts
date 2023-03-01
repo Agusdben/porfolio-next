@@ -58,12 +58,12 @@ const SKILLS: { [key: string]: TechSkill } = {
   },
   GITHUB: {
     type: Skills.GITHUB,
-    level: 'Básico',
+    level: 'Medio',
     logo: '/logos/github.png'
   },
   API_REST: {
     type: Skills.API_REST,
-    level: 'Básico',
+    level: 'Medio',
     logo: '/logos/apirest.png'
   }
 }

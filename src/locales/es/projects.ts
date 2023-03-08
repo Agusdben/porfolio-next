@@ -24,7 +24,7 @@ const PROJECTS: Project[] = [
     repositories: [
       {
         type: 'Frontend',
-        url: 'https://github.com/Agusdben/Todos-frontend'
+        url: 'https://github.com/Agusdben/Todo-frontend-remake'
       },
       {
         type: 'Backend',

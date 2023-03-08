@@ -79,7 +79,7 @@ const Presentation = () => {
           overflow: hidden;
           filter: drop-shadow(0 0 1px ${colors.primary});
           animation: ${animations.morphingBorder} 30s ease infinite,
-            ${animations.toLeft} 600ms linear;
+            ${animations.appear} 600ms linear;
         }
 
         .image > :global(img) {

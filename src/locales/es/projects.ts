@@ -16,10 +16,11 @@ const PROJECTS: Project[] = [
       SKILLS.ExpressJS,
       SKILLS.ReactJS,
       SKILLS.NodeJS,
-      SKILLS.CSS3,
+      SKILLS.Tailwindcss,
+      SKILLS.TypeScript,
       SKILLS['Api REST']
     ],
-    url: 'https://mytodosmylife.netlify.app/',
+    url: 'https://fasttodos.netlify.app/',
     repositories: [
       {
         type: 'Frontend',
